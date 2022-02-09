@@ -23,7 +23,7 @@ Stapi allows you to build your own content types. This installation ships alread
 1. Visit the `/admin` path to register an administrative user.
 2. Login with the newly created credentials.
 3. Adjust public permissions by going to `admin/settings/users-permissions/roles/2`. For both the `Article` and the `Category` collections enable `find` and `findOne`.
-4. Go to `Content Manager` in the lefthand sidebar, and create some content for both `Article` and `Category`. 
+4. Go to `Content Manager` in the lefthand sidebar, and create some content for both `Article` and `Category`.
 5. Test by requesting `/articles`, `/articles/1`, `/categories`, `/categories/1`, etc.
 
 ## Developing content types
@@ -32,7 +32,11 @@ To create your own content types, you can use the Content-Type Builder. This, ho
 
 ## X-Small container
 
-This template will deploy Strapi in the smallest container available on Platform.sh if the plan used is anything above Development (i.e. at least a Small plan).
+This template will deploy Strapi in the smallest container available on Platform.sh (`XS`) if the plan used is anything above Development (i.e. at least a Small/Standard plan). This means resources are allocated as follows:
+
+```
+strapi4 (type: nodejs:16, size: XS, cpu: 0.25, memory: 96)
+```
 
 ## Documentation
 
